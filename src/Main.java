@@ -15,6 +15,9 @@ public class Main {
         employeeBook.averageSalary();
         employeeBook.taxedSalary("PROPORTIONAL");
         employeeBook.taxedSalary("PROGRESSIVE");
+        employeeBook.increaseSalaryByIndex(1, 0.1);
+        employeeBook.getEmployeeBySalary(2, 150000);
+        employeeBook.getListEmployeeBySalary(250000, 4);
     }
 
 

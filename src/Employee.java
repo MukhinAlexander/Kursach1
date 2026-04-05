@@ -4,7 +4,7 @@ public class Employee {
     private int id;
     private String fullName;
     private int department;
-    private int salary;
+    private double salary;
     private static int countId = 0;
 
 
@@ -25,7 +25,7 @@ public class Employee {
     public int getDepartment(){
         return department;
     }
-    public int getSalary(){
+    public double getSalary(){
         return salary;
     }
     public int getId() {
@@ -35,7 +35,7 @@ public class Employee {
     public void setDepartment(int department){
         this.department = department;
     }
-    public void setSalary(int salary){
+    public void setSalary(double salary){
         this.salary = salary;
     }
 
@@ -58,11 +58,11 @@ public class Employee {
     }
 
     @Override
-    public  String toString(){
+    public String toString(){
         return "№ " + getId() + ". Сотрудник " + fullName + ". Отдел " + department + ". Оклад " + salary + ".";
     }
 
-    public void printShortInfo(String fullName, int salary){
+    public void printShortInfo(){
         System.out.println(fullName + " " + salary);
     }
 }
