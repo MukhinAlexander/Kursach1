@@ -4,7 +4,7 @@ public class Employee {
     private int id;
     private String fullName;
     private int department;
-    private double salary;
+    private int salary;
     private static int countId = 0;
 
 
@@ -25,7 +25,7 @@ public class Employee {
     public int getDepartment(){
         return department;
     }
-    public double getSalary(){
+    public int getSalary(){
         return salary;
     }
     public int getId() {
@@ -35,7 +35,7 @@ public class Employee {
     public void setDepartment(int department){
         this.department = department;
     }
-    public void setSalary(double salary){
+    public void setSalary(int salary){
         this.salary = salary;
     }
 

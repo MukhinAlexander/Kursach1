@@ -14,8 +14,13 @@ public class EmployeeBook {
 
     public void averageSalary() {
         short averageSalary = 0;
+        int counter = 0;
         for (Employee e : book) {
-            System.out.println(averageSalary + (short) e.getSalary());
+            averageSalary += e.getSalary();
+            if (e == null){
+                System.out.println(averageSalary/counter);
+            }
+            break;
         }
     }
 
@@ -42,12 +47,12 @@ public class EmployeeBook {
         }
     }
 
-    public void increaseSalaryByIndex(int department, double index){
+    public void increaseSalaryByIndex(int department, short index){
         for (Employee e : book) {
             if (e.getDepartment() != department) {
                 continue;
             } else {
-                e.setSalary(e.getSalary() * index);
+                e.setSalary((e.getSalary() * index) + e.getSalary());
             }
         }
     }
@@ -71,14 +76,35 @@ public class EmployeeBook {
         }
     }
 
-    @Override
-    public boolean equals(Object ob) {
-        if (this == ob) return true; //проверка на то, что ссылки ссылаются на один и тот же объект
-        if (ob == null || getClass() != ob.getClass()) { // проверка на то, что объекта нет, или объекты разных классов
-            return false;
-        }
-        Employee employee = (Employee) ob; // приведение объектов к одному типу
 
-        return ob.getSalary() == Employee.getSalary();
+    public boolean hasEmployee(Employee employee) {
+        for (Employee e : book) {
+            if (e == null){
+                break;
+            }
+            if (e.equals(employee)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean addEmployeeToList(Employee newEmployee){
+        for (int i = 0; i < book.length; i++){
+            if (book[i] == null){
+                book[i] = newEmployee;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public String getEmployeeById(int id){
+        for (Employee e : book){
+            if (e.getId() == id){
+                return e.getFullName();
+            }
+        }
+        return "Сотрудника с таким id нет";
     }
 }
