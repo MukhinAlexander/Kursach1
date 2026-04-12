@@ -3,7 +3,7 @@ public class Main {
 
         Employee person = new Employee("Мухин Александр Николаевич", 3, 120000);
         Employee person1 = new Employee("Иванов Иван Иванович", 3, 150000);
-        Employee person2 = new Employee();
+        Employee person2 = null;
         Employee person3 = new Employee("Сергеев Сергей Сергеевич", 1, 220000);
         Employee person4 = new Employee("Дмитриев Дмитрий Дмитриевич", 5, 320000);
         Employee person5 = new Employee("Николаев Николай Николаевич", 4, 110000);
@@ -24,13 +24,13 @@ public class Main {
         employeeBook.addEmployeeToList(person6);
         employeeBook.addEmployeeToList(person7);
         employeeBook.addEmployeeToList(person8);
-        employeeBook.addEmployeeToList(person);
+
 
 
         employeeBook.showEmployeeBook();
         System.out.println();
 
-/*        employeeBook.averageSalary();
+        employeeBook.averageSalary();
         System.out.println();
 
         employeeBook.taxedSalary("PROPORTIONAL");
@@ -39,19 +39,19 @@ public class Main {
         employeeBook.taxedSalary("PROGRESSIVE");
         System.out.println();
 
-        /*employeeBook.increaseSalaryByIndex(3, (short) 0.1);*/
+        employeeBook.increaseSalaryByIndex(3,  2);
         System.out.println();
 
-        /*employeeBook.getEmployeeBySalary(2, 150000);*/
+        employeeBook.getEmployeeBySalary(2, 90000);
         System.out.println();
 
-        /*employeeBook.getListEmployeeBySalary(250000, 4);*/
+        employeeBook.getListEmployeeBySalary(250000, 2);
         System.out.println();
 
-        /*employeeBook.hasEmployee(person5);*/
+        employeeBook.hasEmployee(person);
         System.out.println();
 
-        /*employeeBook.getEmployeeById(2);*/
+        employeeBook.getEmployeeById(1);
     }
 
 
