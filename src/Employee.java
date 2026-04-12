@@ -5,7 +5,7 @@ public class Employee {
     private String fullName;
     private int department;
     private int salary;
-    private static int countId = 0;
+    private static int countId = 1;
 
 
     public Employee(){
